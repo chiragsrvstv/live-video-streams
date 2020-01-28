@@ -3,25 +3,27 @@ import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
   //to show errors we are creating a helper method renderError
-  renderError(passed) {
-    if (passed.touched && passed.error) {
+  renderError({touched, error}) {
+    if (touched && error) {
       return (
         <div className="ui error message">
-          <div className="header">{passed.error}</div>
+          <div className="header">{error}</div>
         </div>
       );
     }
   }
 
   // the below method diplays form on screen with the help of Field component
-  renderInput = (formProps) => {
-    // console.log(formProps.meta);
-    const className = `field ${formProps.meta.error && formProps.meta.touched ? 'error': ''}`
+  renderInput = ({label, input, meta}) => {
+    // destructured(ES6) the props above 
+    // console.log(input);
+
+    const className = `field ${meta.error && meta.touched ? 'error': ''}`
     return (
       <div className={className}>
-        <label> {formProps.label} </label>
-        <input {...formProps.input} autoComplete="off" />
-        {this.renderError(formProps.meta)}
+        <label> {label} </label>
+        <input {...input} autoComplete="off" />
+        {this.renderError(meta)}
       </div>
     );
     // above, all the properties of formProps are being applied to input element
