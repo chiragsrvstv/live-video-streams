@@ -15,8 +15,8 @@ class StreamCreate extends React.Component {
 
   // the below method diplays form on screen with the help of Field component
   renderInput = ({label, input, meta}) => {
-    // destructured(ES6) the props above 
-    // console.log(input);
+    // destructured(ES6) the props above
+    // console.loginput();
 
     const className = `field ${meta.error && meta.touched ? 'error': ''}`
     return (
