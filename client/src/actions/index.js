@@ -1,7 +1,7 @@
 // action creators
 
 import streams from '../apis/streams';
-import {SIGN_IN, SIGN_OUT} from './types'
+import {SIGN_IN, SIGN_OUT, CREATE_STREAM} from './types'
 
 export const signIn = (userId) => {
   return {
@@ -21,6 +21,8 @@ export const createStream = (formValues) => {
   // using redux thunk
   return async (dispatch) => {
     // posting the form values at /streams
-    streams.post('/streams', formValues);
+    const response = await streams.post('/streams', formValues);
+    // dispatching actionCreator with payload as data fetched by axios
+    dispatch({type: CREATE_STREAM, payload: response.data});
   };
 };
