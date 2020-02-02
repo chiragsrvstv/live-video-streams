@@ -25,11 +25,13 @@ export const signOut = () => {
 
 //
 
-export const createStream = formValues => {
+export const createStream = (formValues) => {
   // using redux thunk
-  return async dispatch => {
+  return async (dispatch, getState) => {
+    // fetching user id from redux store using getstate
+    const {userId} = getState().auth;
     // posting the form values at /streams
-    const response = await streams.post("/streams", formValues);
+    const response = await streams.post("/streams", {...formValues, userId});
     // dispatching actionCreator with payload as data fetched by axios
     dispatch({ type: CREATE_STREAM, payload: response.data });
   };
