@@ -25,6 +25,18 @@
       "description": "special sunday gsming stream",
       "userId": "113069483651935402870",
       "id": 6
+    },
+    {
+      "title": "birthday streams",
+      "description": "hurray",
+      "userId": "113069483651935402870",
+      "id": 10
+    },
+    {
+      "title": "mystery",
+      "description": "guess who?",
+      "userId": null,
+      "id": 11
     }
   ]
 }
