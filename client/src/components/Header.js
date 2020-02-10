@@ -9,7 +9,7 @@ const Header = () => {
         Acidy Streams
       </Link>
       <div className="right menu">
-        <Link to="/streams/" className="item">
+        <Link to="/streams/show" className="item">
           All Streams
         </Link>
         <GoogleAuth />
