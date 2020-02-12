@@ -1,3 +1,5 @@
+import history from '../history';
+
 // action creators
 
 import streams from "../apis/streams";
@@ -34,6 +36,7 @@ export const createStream = (formValues) => {
     const response = await streams.post("/streams", {...formValues, userId});
     // dispatching actionCreator with payload as data fetched by axios
     dispatch({ type: CREATE_STREAM, payload: response.data });
+    history.push('/');
   };
 };
 
