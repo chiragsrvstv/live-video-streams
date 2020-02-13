@@ -1,11 +1,6 @@
 {
   "streams": [
     {
-      "title": "myStreams",
-      "description": "really cool",
-      "id": 1
-    },
-    {
       "title": "fortnite",
       "description": "how to not play fortnite like a pro",
       "id": 2
@@ -25,18 +20,6 @@
       "description": "special sunday gsming stream",
       "userId": "113069483651935402870",
       "id": 6
-    },
-    {
-      "title": "birthday streams",
-      "description": "hurray",
-      "userId": "113069483651935402870",
-      "id": 10
-    },
-    {
-      "title": "mystery",
-      "description": "guess who?",
-      "userId": null,
-      "id": 11
     },
     {
       "title": "merry xmas",
