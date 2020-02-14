@@ -12,6 +12,7 @@ class StreamEdit extends React.Component {
 
   onSubmit = formValues => {
     console.log(formValues);
+    this.props.editStream(this.props.match.params.id, formValues);
   };
 
   // coz streamEdit is rendered by Route hence props get added
@@ -20,9 +21,9 @@ class StreamEdit extends React.Component {
       return <div> Loading... </div>;
     }
     return (
+      // using lodash below to only pick title and desc as initial values
       <div>
         <h3> Edit A Stream </h3>
-        // using lodash below to pick title and desc as initial values
         <StreamForm
           initialValues={ _.pick(this.props.stream, 'title', 'description') }
           onSubmit={this.onSubmit}
