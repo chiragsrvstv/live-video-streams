@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import Modal from "../Modal";
 
 const StreamDelete = () => {
-  return <div>StreamDelete</div>;
+  return (
+    <div className="ui container">
+      <Modal />
+    </div>
+  );
 };
 
 export default StreamDelete;
