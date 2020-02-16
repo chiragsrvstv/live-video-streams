@@ -15,7 +15,7 @@ const Modal = props => {
       onClick={props.onDissmiss}
       className="ui dimmer modals visible active"
     >
-      // onClick event handler to exit modal only when user clicks in background
+      (// onClick event handler to exit modal only when user clicks in background)
       of modal
       <div
         onClick={e => e.stopPropagation()}
