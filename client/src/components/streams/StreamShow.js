@@ -2,6 +2,7 @@ import React from "react";
 import flv from "flv.js"
 import { connect } from "react-redux";
 import { fetchStream } from "../../actions";
+import {streamUrl} from "../../networkConfig.js";
 
 class StreamShow extends React.Component {
   constructor(props){
@@ -38,7 +39,7 @@ class StreamShow extends React.Component {
     const {id} = this.props.match.params
     this.player = flv.createPlayer({
       type: 'flv',
-      url: `http://localhost:8000/live/${id}.flv`
+      url: `${streamUrl}/live/${id}.flv`
     });
     this.player.attachMediaElement(this.videoRef.current);
     this.player.load(); // not trying to automatically play the video, only user can.
