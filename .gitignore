@@ -3,6 +3,7 @@
 config.js
 modalExample.html
 node_modules
+networkConfig.js
 
 # dependencies
 node_modules
