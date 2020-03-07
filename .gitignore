@@ -4,6 +4,8 @@ config.js
 modalExample.html
 node_modules
 networkConfig.js
+screenshotStructure.png
+
 
 # dependencies
 node_modules
