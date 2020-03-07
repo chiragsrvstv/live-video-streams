@@ -34,11 +34,15 @@ class StreamList extends React.Component {
   renderList() {
     return this.props.streams.map(stream => {
       return (
-        <div className="item" key={stream.id}>
-          {this.renderAdmin(stream)}
-          <i className="large middle aligned icon camera" />
-          <div className="content">
-            <Link to={`/streams/${stream.id}`}>{stream.title}</Link>
+        <div className="ui card">
+          <div className="ui huge image">
+            <img src="spotlight.jpg" alt="cover-image" className="large middle aligned icon camera" />
+          </div>
+          <div className="content" key={stream.id}>
+            {this.renderAdmin(stream)}
+            <Link className="header" to={`/streams/${stream.id}`}>
+              {stream.title}
+            </Link>
             <div className="description"> {stream.description} </div>
           </div>
         </div>
@@ -63,8 +67,8 @@ class StreamList extends React.Component {
     return (
       <div>
         <h2> Streams </h2>
-        <div className="ui celled list"> {this.renderList()}</div>
-        {this.renderCreate()}
+        <div className="ui cards"> {this.renderList()}</div>
+        <div className="ui item">{this.renderCreate()}</div>
       </div>
     );
   }
