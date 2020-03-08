@@ -36,7 +36,13 @@ class StreamList extends React.Component {
       return (
         <div className="ui card">
           <div className="ui huge image">
-            <img src="spotlight.jpg" alt="cover-image" className="large middle aligned icon camera" />
+            <Link to={`/streams/${stream.id}`}>
+              <img
+                src="spotlight.jpg"
+                alt="cover-image"
+                className="large middle aligned icon camera"
+              />
+            </Link>
           </div>
           <div className="content" key={stream.id}>
             {this.renderAdmin(stream)}
