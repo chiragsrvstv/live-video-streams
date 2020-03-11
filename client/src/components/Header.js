@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header-menu">
       <div className="ui menu">
         <Link to="/" className="item">
-          Acidy Streams 
+          Acidy Streams
         </Link>
         <div className="right menu">
           <Link to="/" className="item">
