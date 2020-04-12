@@ -18,6 +18,8 @@ node_modules
 # production
 /build
 
+screenshotStructure.png
+
 # misc
 .DS_Store
 .env.local

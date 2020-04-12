@@ -9,6 +9,6 @@
   "author": "chirag",
   "license": "ISC",
   "dependencies": {
-    "node-media-server": "^2.1.4"
+    "node-media-server": "^2.1.6"
   }
 }
